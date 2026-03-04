@@ -669,13 +669,15 @@ class DialogTraco(QDialog):
         self.traco_id = traco_id
         self.setModal(True)
         
+        # PRIMEIRO configura a interface (cria os widgets)
+        self.setup_ui()
+        
+        # DEPOIS carrega os dados se for edição
         if traco_id:
             self.setWindowTitle("✏️ Editar Traço")
             self.carregar_dados()
         else:
             self.setWindowTitle("➕ Novo Traço")
-            
-        self.setup_ui()
         
     def setup_ui(self):
         layout = QVBoxLayout(self)
@@ -825,7 +827,7 @@ class DialogTraco(QDialog):
         # Cimento
         self.cimento_spin = QDoubleSpinBox()
         self.cimento_spin.setRange(0, 10000)
-        self.cimento_spin.setValue(30000)
+        self.cimento_spin.setValue(300)
         self.cimento_spin.setSuffix(" kg")
         self.cimento_spin.setStyleSheet("""
             QDoubleSpinBox {
@@ -843,7 +845,7 @@ class DialogTraco(QDialog):
         # Brita 0
         self.brita0_spin = QDoubleSpinBox()
         self.brita0_spin.setRange(0, 20000)
-        self.brita0_spin.setValue(10000)
+        self.brita0_spin.setValue(100)
         self.brita0_spin.setSuffix(" kg")
         self.brita0_spin.setStyleSheet("""
             QDoubleSpinBox {
@@ -861,7 +863,7 @@ class DialogTraco(QDialog):
         # Brita 1
         self.brita1_spin = QDoubleSpinBox()
         self.brita1_spin.setRange(0, 20000)
-        self.brita1_spin.setValue(30000)
+        self.brita1_spin.setValue(300)
         self.brita1_spin.setSuffix(" kg")
         self.brita1_spin.setStyleSheet("""
             QDoubleSpinBox {
@@ -879,7 +881,7 @@ class DialogTraco(QDialog):
         # Areia média
         self.areia_media_spin = QDoubleSpinBox()
         self.areia_media_spin.setRange(0, 20000)
-        self.areia_media_spin.setValue(8000)
+        self.areia_media_spin.setValue(80)
         self.areia_media_spin.setSuffix(" kg")
         self.areia_media_spin.setStyleSheet("""
             QDoubleSpinBox {
@@ -897,7 +899,7 @@ class DialogTraco(QDialog):
         # Pó de Brita
         self.po_brita_spin = QDoubleSpinBox()
         self.po_brita_spin.setRange(0, 20000)
-        self.po_brita_spin.setValue(30000)
+        self.po_brita_spin.setValue(300)
         self.po_brita_spin.setSuffix(" kg")
         self.po_brita_spin.setStyleSheet("""
             QDoubleSpinBox {
@@ -915,7 +917,7 @@ class DialogTraco(QDialog):
         # Água
         self.agua_spin = QDoubleSpinBox()
         self.agua_spin.setRange(0, 50000)
-        self.agua_spin.setValue(18000)
+        self.agua_spin.setValue(180)
         self.agua_spin.setSuffix(" L")
         self.agua_spin.setStyleSheet("""
             QDoubleSpinBox {
@@ -933,7 +935,7 @@ class DialogTraco(QDialog):
         # Aditivo
         self.aditivo_spin = QDoubleSpinBox()
         self.aditivo_spin.setRange(0, 50000)
-        self.aditivo_spin.setValue(20000)
+        self.aditivo_spin.setValue(200)
         self.aditivo_spin.setSuffix(" kg")
         self.aditivo_spin.setStyleSheet("""
             QDoubleSpinBox {
