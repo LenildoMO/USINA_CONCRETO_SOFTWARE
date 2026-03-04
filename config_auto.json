@@ -1,0 +1,8 @@
+{
+  "sistema": "Betto Mix Web Sync",
+  "versao": "2.0.0",
+  "porta": 8765,
+  "auto_fix": true,
+  "tema_cor": "#003366",
+  "login_obrigatorio": true
+}

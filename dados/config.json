@@ -1,0 +1,11 @@
+{
+  "ServidorLocal": false,
+  "PastaDados": "C:\\Users\\Micro\\Documents\\usina_concreto_software\\dados",
+  "ApiKey": "bettomix123",
+  "Timeout": 30,
+  "TentativasConexao": 3,
+  "UrlApi": "https://api.bettomix.com/v1",
+  "ModoOffline": true,
+  "AutoSincronizar": true,
+  "IntervaloSincronizacao": 300
+}

@@ -1,0 +1,12 @@
+{
+  "Tentativas": 0,
+  "ID": "c271d110-db26-4ee5-9512-04002811f33d",
+  "Timestamp": "2026-01-12 14:46:26.502",
+  "Dados": {
+    "Id": 1,
+    "Tipo": "CLIENTE",
+    "Timestamp": "2026-01-12 14:44:25",
+    "Nome": "Cliente Teste 1",
+    "Telefone": "(11) 9999-8888"
+  }
+}

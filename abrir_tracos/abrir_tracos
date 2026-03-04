@@ -1,0 +1,58 @@
+def abrir_tracos(self):
+    """Abre a tela de traços - VERSÃO GARANTIDA"""
+    print("\n" + "="*50)
+    print("🎯 BOTÃO TRAÇOS CLICADO!")
+    print("="*50)
+    
+    try:
+        # 1. Primeiro, vamos ver se podemos criar uma janela simples
+        from PyQt5.QtWidgets import QDialog, QVBoxLayout, QLabel, QPushButton
+        
+        # 2. Criar uma janela de teste SIMPLES
+        self.janela_tracos_teste = QDialog(self)
+        self.janela_tracos_teste.setWindowTitle("TRAÇOS - TESTE DE FUNCIONAMENTO")
+        self.janela_tracos_teste.setGeometry(200, 100, 400, 300)
+        
+        layout = QVBoxLayout()
+        
+        # Título
+        titulo = QLabel("✅ TRAÇOS FUNCIONANDO!")
+        titulo.setStyleSheet("font-size: 24px; color: green; font-weight: bold;")
+        layout.addWidget(titulo)
+        
+        # Mensagem
+        msg = QLabel("Se você está vendo isso, o botão ESTÁ funcionando!")
+        layout.addWidget(msg)
+        
+        # Lista de traços
+        lista = QLabel("""
+        1. Concreto 20 MPa\n
+        2. Concreto 25 MPa\n
+        3. Concreto 30 MPa\n
+        4. Argamassa\n
+        5. Contrapiso
+        """)
+        layout.addWidget(lista)
+        
+        # Botão fechar
+        btn_fechar = QPushButton("FECHAR")
+        btn_fechar.clicked.connect(self.janela_tracos_teste.close)
+        btn_fechar.setStyleSheet("background-color: red; color: white;")
+        layout.addWidget(btn_fechar)
+        
+        self.janela_tracos_teste.setLayout(layout)
+        
+        # 3. MOSTRAR A JANELA
+        self.janela_tracos_teste.exec_()  # Modal (bloqueia a janela principal)
+        # OU: self.janela_tracos_teste.show()  # Não-modal
+        
+        print("🎉 Tela de traços aberta com sucesso!")
+        
+    except Exception as e:
+        print(f"💥 ERRO ao abrir tela de traços: {e}")
+        import traceback
+        traceback.print_exc()
+        
+        # Mostrar mensagem de erro
+        QMessageBox.critical(self, "ERRO CRÍTICO", 
+            f"Não foi possível abrir a tela de traços:\n\n{str(e)}")

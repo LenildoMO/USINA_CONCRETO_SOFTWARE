@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "placa": "ABC-1234",
+        "modelo": "Mercedes-Benz",
+        "cor": "Branco",
+        "ano": 2020
+    },
+    {
+        "id": 2,
+        "placa": "DEF-5678",
+        "modelo": "Volvo",
+        "cor": "Azul",
+        "ano": 2019
+    }
+]

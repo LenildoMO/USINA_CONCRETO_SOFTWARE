@@ -1,0 +1,94 @@
+[2026-01-09 16:06:38] [INFO] Iniciando correção automática...
+[2026-01-09 16:06:38] [INFO] 🔍 Iniciando detecção de problemas...
+[2026-01-09 16:06:38] [INFO]   Verificando Python...
+[2026-01-09 16:06:38] [INFO]     ✅ Python encontrado: python
+[2026-01-09 16:06:38] [INFO]   Verificando ambiente virtual...
+[2026-01-09 16:06:38] [INFO]     ✅ Ambiente virtual encontrado
+[2026-01-09 16:06:38] [INFO]   Verificando dependências...
+[2026-01-09 16:06:38] [INFO]   Verificando estrutura de arquivos...
+[2026-01-09 16:06:39] [INFO]   Verificando permissões...
+[2026-01-09 16:06:39] [INFO]     ✅ Permissões OK
+[2026-01-09 16:06:39] [INFO]   Verificando portas...
+[2026-01-09 16:06:49] [INFO]   Verificando firewall...
+[2026-01-09 16:06:49] [INFO]   Verificando arquivos do sistema...
+[2026-01-09 16:06:49] [INFO] ✅ Detecção concluída: 13 problemas encontrados
+[2026-01-09 16:06:49] [WARNING] Problemas encontrados:
+[2026-01-09 16:06:49] [WARNING]   1. Python versão 3.14 é muito antiga (mínimo 3.8)
+[2026-01-09 16:06:49] [WARNING]   2. Dependências faltando: fastapi, uvicorn, websockets
+[2026-01-09 16:06:49] [WARNING]   3. Diretório faltando: logs
+[2026-01-09 16:06:50] [WARNING]   4. Diretório faltando: web_sync
+[2026-01-09 16:06:50] [WARNING]   5. Diretório faltando: original_system
+[2026-01-09 16:06:50] [WARNING]   6. Diretório faltando: original_system\ui
+[2026-01-09 16:06:50] [WARNING]   7. Diretório faltando: original_system\ui\pages
+[2026-01-09 16:06:50] [WARNING]   8. Diretório faltando: original_system\resources
+[2026-01-09 16:06:50] [WARNING]   9. Arquivo faltando: betto_auto_system.py
+[2026-01-09 16:06:50] [WARNING]   10. Arquivo faltando: start_sistema.ps1
+[2026-01-09 16:06:50] [WARNING]   11. Arquivo faltando: start_sistema.bat
+[2026-01-09 16:06:50] [WARNING]   12. Arquivo faltando: config_auto.json
+[2026-01-09 16:06:50] [WARNING]   13. Regra de firewall não configurada
+[2026-01-09 16:07:42] [INFO] 🔧 Aplicando correções automáticas...
+[2026-01-09 16:07:42] [INFO]   Aplicando: Atualizar Python para versão 3.8+
+[2026-01-09 16:07:42] [INFO]     🔄 Atualizando Python...
+[2026-01-09 16:07:42] [INFO]     📥 Instalando Python...
+[2026-01-09 16:08:34] [SUCCESS]     ✅ Correção aplicada
+[2026-01-09 16:08:34] [INFO]   Aplicando: Instalar pacotes Python faltantes
+[2026-01-09 16:08:34] [INFO]     📦 Instalando dependências...
+[2026-01-09 16:08:46] [INFO]       ✅ fastapi instalado
+[2026-01-09 16:08:50] [INFO]       ✅ uvicorn instalado
+[2026-01-09 16:08:54] [INFO]       ✅ websockets instalado
+[2026-01-09 16:08:54] [SUCCESS]     ✅ Correção aplicada
+[2026-01-09 16:08:54] [INFO]   Aplicando: Criar diretório logs
+[2026-01-09 16:08:54] [INFO]     📁 Criando diretório...
+[2026-01-09 16:08:54] [SUCCESS]     ✅ Correção aplicada
+[2026-01-09 16:08:54] [INFO]   Aplicando: Criar diretório web_sync
+[2026-01-09 16:08:54] [INFO]     📁 Criando diretório...
+[2026-01-09 16:08:54] [SUCCESS]     ✅ Correção aplicada
+[2026-01-09 16:08:54] [INFO]   Aplicando: Criar diretório original_system
+[2026-01-09 16:08:54] [INFO]     📁 Criando diretório...
+[2026-01-09 16:08:54] [SUCCESS]     ✅ Correção aplicada
+[2026-01-09 16:08:54] [INFO]   Aplicando: Criar diretório original_system\ui
+[2026-01-09 16:08:54] [INFO]     📁 Criando diretório...
+[2026-01-09 16:08:54] [SUCCESS]     ✅ Correção aplicada
+[2026-01-09 16:08:54] [INFO]   Aplicando: Criar diretório original_system\ui\pages
+[2026-01-09 16:08:54] [INFO]     📁 Criando diretório...
+[2026-01-09 16:08:54] [SUCCESS]     ✅ Correção aplicada
+[2026-01-09 16:08:54] [INFO]   Aplicando: Criar diretório original_system\resources
+[2026-01-09 16:08:54] [INFO]     📁 Criando diretório...
+[2026-01-09 16:08:54] [SUCCESS]     ✅ Correção aplicada
+[2026-01-09 16:08:54] [INFO]   Aplicando: Criar arquivo betto_auto_system.py
+[2026-01-09 16:08:54] [INFO]     📄 Criando arquivo betto_auto_system.py...
+[2026-01-09 16:08:54] [SUCCESS]     ✅ Correção aplicada
+[2026-01-09 16:08:54] [INFO]   Aplicando: Criar arquivo start_sistema.ps1
+[2026-01-09 16:08:54] [INFO]     📄 Criando arquivo start_sistema.ps1...
+[2026-01-09 16:08:54] [SUCCESS]     ✅ Correção aplicada
+[2026-01-09 16:08:54] [INFO]   Aplicando: Criar arquivo start_sistema.bat
+[2026-01-09 16:08:54] [INFO]     📄 Criando arquivo start_sistema.bat...
+[2026-01-09 16:08:54] [SUCCESS]     ✅ Correção aplicada
+[2026-01-09 16:08:54] [INFO]   Aplicando: Criar arquivo config_auto.json
+[2026-01-09 16:08:54] [INFO]     📄 Criando arquivo config_auto.json...
+[2026-01-09 16:08:54] [SUCCESS]     ✅ Correção aplicada
+[2026-01-09 16:08:54] [INFO]   Aplicando: Configurar regra no firewall
+[2026-01-09 16:08:54] [INFO]     🛡️ Configurando firewall...
+[2026-01-09 16:08:55] [WARNING]       ⚠️  Execute como Administrador para configurar firewall
+[2026-01-09 16:08:55] [SUCCESS]     ✅ Correção aplicada
+[2026-01-09 16:08:55] [INFO] Resultado da correção:
+[2026-01-09 16:08:55] [SUCCESS]   Problemas corrigidos: 13
+[2026-01-09 16:08:55] [INFO]   Lista de correções aplicadas:
+[2026-01-09 16:08:55] [SUCCESS]     ✅ Atualizar Python para versão 3.8+
+[2026-01-09 16:08:55] [SUCCESS]     ✅ Instalar pacotes Python faltantes
+[2026-01-09 16:08:55] [SUCCESS]     ✅ Criar diretório logs
+[2026-01-09 16:08:55] [SUCCESS]     ✅ Criar diretório web_sync
+[2026-01-09 16:08:55] [SUCCESS]     ✅ Criar diretório original_system
+[2026-01-09 16:08:55] [SUCCESS]     ✅ Criar diretório original_system\ui
+[2026-01-09 16:08:55] [SUCCESS]     ✅ Criar diretório original_system\ui\pages
+[2026-01-09 16:08:55] [SUCCESS]     ✅ Criar diretório original_system\resources
+[2026-01-09 16:08:55] [SUCCESS]     ✅ Criar arquivo betto_auto_system.py
+[2026-01-09 16:08:55] [SUCCESS]     ✅ Criar arquivo start_sistema.ps1
+[2026-01-09 16:08:55] [SUCCESS]     ✅ Criar arquivo start_sistema.bat
+[2026-01-09 16:08:55] [SUCCESS]     ✅ Criar arquivo config_auto.json
+[2026-01-09 16:08:55] [SUCCESS]     ✅ Configurar regra no firewall
+[2026-01-09 16:08:55] [SUCCESS] ✅ Correção automática concluída com sucesso!
+[2026-01-09 16:08:59] [INFO] 🚀 Iniciando sistema Betto Mix...
+[2026-01-09 16:08:59] [SUCCESS] ✅ Sistema iniciado com sucesso!
+[2026-01-09 16:09:03] [INFO] 🌐 Navegador aberto
+[2026-01-09 16:09:03] [INFO] 📄 Relatório salvo em: C:\Users\Micro\Documents\usina_concreto_software\correcao_relatorio_20260109_160903.txt

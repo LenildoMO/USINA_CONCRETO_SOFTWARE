@@ -1,0 +1,13 @@
+{
+  "Tentativas": 0,
+  "ID": "9eb74069-1f11-47ed-a313-630f9c49f86d",
+  "Timestamp": "2026-01-12 14:46:33.123",
+  "Dados": {
+    "Valor": 150.5,
+    "Timestamp": "2026-01-12 14:44:25",
+    "Tipo": "PEDIDO",
+    "Id": 2,
+    "Status": "Pendente",
+    "Numero": "PED1001"
+  }
+}

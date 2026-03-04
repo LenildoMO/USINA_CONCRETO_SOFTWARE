@@ -1,0 +1,64 @@
+@echo off
+chcp 65001 >nul
+title CONFIGURADOR USINA BETTO MIX
+
+echo ========================================
+echo    CONFIGURADOR AUTOMATICO
+echo ========================================
+echo.
+
+REM Verificar local
+echo Verificando arquivos...
+if not exist "main.py" (
+    echo ERRO: main.py nao encontrado!
+    pause
+    exit /b 1
+)
+
+REM Criar pasta na Area de Trabalho
+set DESKTOP=%USERPROFILE%\Desktop
+set PASTA=%DESKTOP%\USINA_BETTO_MIX_PRO
+echo Criando pasta: %PASTA%
+mkdir "%PASTA%" 2>nul
+
+REM Copiar tudo
+echo.
+echo Copiando arquivos...
+copy "*.py" "%PASTA%\" >nul 2>&1
+copy "*.txt" "%PASTA%\" >nul 2>&1
+copy "*.db" "%PASTA%\" >nul 2>&1
+
+REM Criar BAT para executar
+echo @echo off > "%PASTA%\EXECUTAR.bat"
+echo chcp 65001 ^>nul >> "%PASTA%\EXECUTAR.bat"
+echo echo USINA BETTO MIX CONCRETO >> "%PASTA%\EXECUTAR.bat"
+echo cd /d "%%~dp0" >> "%PASTA%\EXECUTAR.bat"
+echo python main.py >> "%PASTA%\EXECUTAR.bat"
+echo pause >> "%PASTA%\EXECUTAR.bat"
+
+REM Criar atalho
+echo Criando atalho na Area de Trabalho...
+echo Set oWS = WScript.CreateObject("WScript.Shell") > "%TEMP%\atalho.vbs"
+echo sLinkFile = "%DESKTOP%\Usina Betto Mix.lnk" >> "%TEMP%\atalho.vbs"
+echo Set oLink = oWS.CreateShortcut(sLinkFile) >> "%TEMP%\atalho.vbs"
+echo oLink.TargetPath = "%PASTA%\EXECUTAR.bat" >> "%TEMP%\atalho.vbs"
+echo oLink.WorkingDirectory = "%PASTA%" >> "%TEMP%\atalho.vbs"
+echo oLink.Save >> "%TEMP%\atalho.vbs"
+cscript //nologo "%TEMP%\atalho.vbs" >nul
+
+echo.
+echo ========================================
+echo     CONCLUIDO!
+echo ========================================
+echo.
+echo ✅ Sistema configurado em:
+echo    %PASTA%
+echo.
+echo 🔗 Atalho criado:
+echo    "Usina Betto Mix" na Area de Trabalho
+echo.
+echo 🚀 Para usar:
+echo    1. Va para sua Area de Trabalho
+echo    2. Clique duas vezes em "Usina Betto Mix"
+echo.
+pause

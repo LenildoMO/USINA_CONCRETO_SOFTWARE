@@ -1,0 +1,57 @@
+[
+  {
+    "Tipo": "INFO",
+    "Mensagem": "Sistema Betto Mix instalado com sucesso",
+    "Data": "2026-01-12 14:11:09"
+  },
+  {
+    "Tipo": "INFO",
+    "Data": "2026-01-12 14:16:01",
+    "Mensagem": "Teste do sistema realizado"
+  },
+  {
+    "Tipo": "INFO",
+    "Data": "2026-01-12 14:16:09",
+    "Mensagem": "Configuração da API atualizada"
+  },
+  {
+    "Tipo": "ERRO",
+    "Data": "2026-01-12 14:16:17",
+    "Mensagem": "API Key não configurada"
+  },
+  {
+    "Tipo": "ERRO",
+    "Data": "2026-01-12 14:16:18",
+    "Mensagem": "API Key não configurada"
+  },
+  {
+    "Tipo": "ERRO",
+    "Data": "2026-01-12 14:16:18",
+    "Mensagem": "API Key não configurada"
+  },
+  {
+    "Tipo": "INFO",
+    "Data": "2026-01-12 14:16:18",
+    "Mensagem": "Sincronização concluída: 0 sucessos, 3 erros"
+  },
+  {
+    "Mensagem": "Teste do sistema realizado",
+    "Tipo": "INFO",
+    "Data": "2026-01-12 14:19:55"
+  },
+  {
+    "Data": "2026-01-12 14:24:44",
+    "Mensagem": "Configuração da API atualizada",
+    "Tipo": "INFO"
+  },
+  {
+    "Data": "2026-01-12 14:24:51",
+    "Mensagem": "Teste do sistema realizado",
+    "Tipo": "INFO"
+  },
+  {
+    "Data": "2026-01-12 14:25:10",
+    "Mensagem": "Configuração da API atualizada",
+    "Tipo": "INFO"
+  }
+]

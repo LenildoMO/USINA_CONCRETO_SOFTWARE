@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betto Mix - Sistema Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .logo {
+            font-size: 3rem;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+        
+        .status {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🏗️</div>
+        <h1>Betto Mix - Sistema Web</h1>
+        <p>Sistema de gestão para usina de concreto</p>
+        
+        <div class="status">
+            <h3>Status do Sistema</h3>
+            <p id="status">Verificando...</p>
+        </div>
+        
+        <a href="http://localhost:5000" class="btn" target="_blank">
+            🔗 Acessar Sistema Web
+        </a>
+        
+        <br><br>
+        
+        <a href="#" class="btn" onclick="startServer()">
+            🚀 Iniciar Servidor Local
+        </a>
+        
+        <script>
+            // Verificar status do servidor
+            async function checkServer() {
+                try {
+                    const response = await fetch('http://localhost:5000/api/status');
+                    if (response.ok) {
+                        document.getElementById('status').innerHTML = '✅ Servidor online!';
+                        document.getElementById('status').style.color = 'green';
+                    }
+                } catch (error) {
+                    document.getElementById('status').innerHTML = '⚠️ Servidor offline';
+                    document.getElementById('status').style.color = 'orange';
+                }
+            }
+            
+            // Iniciar servidor
+            function startServer() {
+                alert('Para iniciar o servidor, execute no PowerShell: python servidor_web.py');
+            }
+            
+            // Verificar a cada 5 segundos
+            checkServer();
+            setInterval(checkServer, 5000);
+        </script>
+    </div>
+</body>
+</html>

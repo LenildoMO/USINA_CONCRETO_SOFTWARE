@@ -1,0 +1,11 @@
+{
+    "whatsapp": {
+        "phone_number": "",
+        "admin_number": "+5511999999999",
+        "enabled": true,
+        "send_pending": true,
+        "send_loading": true,
+        "send_finished": true,
+        "check_interval": 30
+    }
+}

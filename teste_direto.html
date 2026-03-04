@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🏭 Betto Mix - Teste Direto</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            min-height: 100vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .test-container {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.2);
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #00ccff;
+        }
+        
+        .status {
+            background: #28a745;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.5em;
+            margin: 20px 0;
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .info-box {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .info-box h3 {
+            color: #00ccff;
+            margin-bottom: 15px;
+        }
+        
+        .btn-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+        
+        .btn-test {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+        }
+        
+        .btn-api {
+            background: linear-gradient(135deg, #17a2b8 0%, #0dcaf0 100%);
+        }
+        
+        .btn-monitor {
+            background: linear-gradient(135deg, #ffc107 0%, #fd7e14 100%);
+        }
+        
+        .terminal {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            text-align: left;
+            overflow-x: auto;
+        }
+        
+        .terminal .command {
+            color: #00ff88;
+        }
+        
+        .terminal .comment {
+            color: #888;
+        }
+        
+        @media (max-width: 768px) {
+            .test-container {
+                padding: 25px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .btn-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🏭 BETTO MIX MEGA SYSTEM</h1>
+        <div class="status">✅ SISTEMA WEB FUNCIONAL</div>
+        
+        <div class="info-box">
+            <h3>📋 Teste do Sistema Web</h3>
+            <p>Esta é uma página HTML estática que demonstra que o sistema está funcionando.</p>
+            <p>Se esta página carregou, o servidor web está operacional.</p>
+            <p><strong>Status:</strong> ✅ Sistema funcionando corretamente</p>
+        </div>
+        
+        <div class="btn-grid">
+            <a href="http://localhost:5000" class="btn" target="_blank">
+                <i class="fas fa-home"></i> Sistema Web
+            </a>
+            
+            <a href="http://localhost:5000/dashboard" class="btn btn-test" target="_blank">
+                <i class="fas fa-tachometer-alt"></i> Dashboard
+            </a>
+            
+            <a href="http://localhost:5000/monitor" class="btn btn-monitor" target="_blank">
+                <i class="fas fa-desktop"></i> Monitor
+            </a>
+            
+            <a href="http://localhost:5000/api/status" class="btn btn-api" target="_blank">
+                <i class="fas fa-code"></i> API Status
+            </a>
+        </div>
+        
+        <div class="terminal">
+            <div class="comment"># Para testar via linha de comando:</div>
+            <div class="command">curl http://localhost:5000/api/status</div>
+            <div class="comment"># Resposta esperada: {"status": "online"}</div>
+            <br>
+            <div class="command">python -c "import requests; print(requests.get('http://localhost:5000/api/status').json())"</div>
+            <div class="comment"># Teste com Python (instale requests: pip install requests)</div>
+        </div>
+        
+        <div style="margin-top: 30px;">
+            <p><strong>🎯 Se esta página carregou mas o sistema Flask não funciona:</strong></p>
+            <p>1. Execute: <code>python app_simple.py</code></p>
+            <p>2. Ou execute: <code>.\iniciar_web.ps1</code></p>
+            <p>3. Ou execute: <code>iniciar_web.bat</code></p>
+        </div>
+    </div>
+    
+    <!-- Font Awesome para ícones -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    <script>
+        // Teste de JavaScript
+        console.log('✅ Página de teste carregada com sucesso');
+        
+        // Atualizar hora
+        function updateTime() {
+            const now = new Date();
+            const timeStr = now.toLocaleTimeString('pt-BR', { hour12: false });
+            document.title = `🏭 Betto Mix • ${timeStr}`;
+        }
+        
+        setInterval(updateTime, 1000);
+        updateTime();
+        
+        // Testar conexão com API
+        async function testAPI() {
+            try {
+                const response = await fetch('http://localhost:5000/api/status');
+                if (response.ok) {
+                    console.log('✅ API está respondendo');
+                } else {
+                    console.log('⚠️ API não está respondendo');
+                }
+            } catch (error) {
+                console.log('❌ Não foi possível conectar à API');
+            }
+        }
+        
+        // Testar após carregamento
+        setTimeout(testAPI, 2000);
+    </script>
+</body>
+</html>

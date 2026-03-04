@@ -1,0 +1,16 @@
+[
+  {
+    "codigo": "1440",
+    "resistencia": "fck 40 MPa",
+    "agregado": "B0+1",
+    "consistencia": "120+-20 mm",
+    "descricao": "fck 40 MPa  B0+1  120+-20 mm",
+    "cimento": 348,
+    "brita0": 405,
+    "brita1": 373,
+    "areia": 196,
+    "po_brita": 783,
+    "aditivo": 214,
+    "ac": 2.61
+  }
+]

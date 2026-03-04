@@ -1,0 +1,55 @@
+{
+  "pesagens": [
+    {
+      "cliente": "Construtora Alfa",
+      "peso": 8.5,
+      "traco": "Fck 25MPa",
+      "id": 1,
+      "status": "concluido",
+      "data": "2026-01-09"
+    }
+  ],
+  "clientes": [
+    {
+      "telefone": "(11) 9999-8888",
+      "nome": "Construtora Alfa",
+      "status": "ativo",
+      "id": 1
+    },
+    {
+      "telefone": "(11) 9777-6666",
+      "nome": "Engenharia Beta",
+      "status": "ativo",
+      "id": 2
+    },
+    {
+      "telefone": "(11) 9555-4444",
+      "nome": "Obras Gamma",
+      "status": "inativo",
+      "id": 3
+    }
+  ],
+  "estoque": [
+    {
+      "unidade": "sacos",
+      "quantidade": 500,
+      "minimo": 100,
+      "material": "Cimento CP II",
+      "id": 1
+    },
+    {
+      "unidade": "m³",
+      "quantidade": 2000,
+      "minimo": 500,
+      "material": "Areia Média",
+      "id": 2
+    },
+    {
+      "unidade": "m³",
+      "quantidade": 1500,
+      "minimo": 400,
+      "material": "Brita 1",
+      "id": 3
+    }
+  ]
+}

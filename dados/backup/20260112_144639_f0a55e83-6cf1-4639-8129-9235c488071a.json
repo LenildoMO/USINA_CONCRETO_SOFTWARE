@@ -1,0 +1,13 @@
+{
+  "Tentativas": 0,
+  "ID": "f0a55e83-6cf1-4639-8129-9235c488071a",
+  "Timestamp": "2026-01-12 14:46:39.754",
+  "Dados": {
+    "Nome": "Concreto Usinado",
+    "Tipo": "PRODUTO",
+    "Timestamp": "2026-01-12 14:44:25",
+    "Id": 3,
+    "Quantidade": 100,
+    "Unidade": "m³"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "Line": 31,
+  "StackTrace": "at Registrar-Log, <No file>: line 31\r\nat <ScriptBlock>, <No file>: line 11",
+  "Mensagem": "Erro fatal: Method invocation failed because [System.Management.Automation.PSObject] does not contain a method named 'op_Addition'.",
+  "Tipo": "CRITICO",
+  "Timestamp": "2026-01-12 14:37:32"
+}
